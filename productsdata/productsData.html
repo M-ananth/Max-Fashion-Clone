@@ -5,11 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+         body>div{
+            display: grid;
+            grid-template-columns: repeat(4,300px);
+            height: 500px;
+            width: 300px;
+            grid-gap: 20px;
+        }
+        .immg{
+          height: 30%;
+          width: 100%;
+          border: 1px solid grey;
+        }
+        #btn1{
+            margin-left: 84%;
+            background-color: teal;
+        }#btn2{
+            background-color: red;
+        }
+        .box2{
+            display: grid;
+            grid-template-areas: "l1 l2""l3 l3";
+           
+        }
+      
+        .b1{
+           grid-area: l1;
+       }
+       .b2{
+           grid-area: l2;
+       }
+       .b3{
+           grid-area: l3;
+           background-color: blue;
+       }
+       
+     
+    </style>
 </head>
 <body>
-  
-
-    
+    <select name="" id="sortByPrice" onchange="handlePriceSort()">
+        <option value="">sort by price</option>
+        <option value="low">low to high</option>
+        <option value="high">high to low</option>
+    </select>
+    <button id="btn1">Go to cart</button>
+    <button id="btn2">Log out</button>
+    <div id="container"></div>
+   
 </body>
 </html>
 <script>
@@ -334,17 +378,71 @@
         image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010141354-Beige-Beige-1000010141354-8052021_03-2100.jpg",
         image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010141354-Beige-Beige-1000010141354-8052021_05-2100.jpg",
         price:"899",name:"MAX Printed Slim Fit Kurta"},
+        ]
+      var product = JSON.parse(localStorage.getItem("shoppingData"))
+        localStorage.setItem("shoppingData",JSON.stringify(data));
+        displayitems(product);
+        function handlePriceSort(){
+        var selected = document.getElementById("sortByPrice").value;
+        if (selected =="low"){
+        product = product.sort(function (a, b) {
+             return a.price-b.price
+            });
+            displayitems(product);
+        }
+        if (selected =="high"){
+        product =product.sort(function (a, b) {
+             return b.price-a.price
+            });
+        }
+       displayitems(product);
+    }
+
+    
+    
+    function displayitems(product){
+        document.querySelector("#container").innerHTML=""
+      product.map(function(item){
+       
+            var imageDiv = document.createElement("div")
+      imageDiv.setAttribute("class","imgg");
+     
+      imageDiv.addEventListener("onmouseover",showit())
+        var image = document.createElement("img");
+        image.setAttribute("src",item.image1)
+        image.setAttribute("class","immg")
+        var h1 = document.createElement("h1");
+        h1.textContent = item.name
+        var h2 =document.createElement("h2");
+        h2.textContent=item.price
+        
        
 
-
-
-
+        var boxdiv = document.createElement("div")
+        boxdiv.setAttribute("class","box2")
+        var color = document.createElement("div")
+        color.setAttribute("class","b1")
+        color.textContent="Red";
+        var size = document.createElement("select")
+        size.setAttribute("class","b2")
+        size.innerHTML=`<Option>---</Option>,<Option>XL</Option>,<Option>L</Option>,<Option>S</Option>`
        
+         var btn = document.createElement("button");
+         btn.addEventListener("click",function(){
+             additem(item)
+         });
+         btn.setAttribute("class","b3")
+         btn.textContent = "ADD TO BASKET";
 
-
-
-
-
-
-    ]
+         boxdiv.append(color,size,btn)
+         imageDiv.append(image,h1,h2,boxdiv)
+         document.getElementById("container").append(imageDiv)
+        
+        })
+    function showit(){
+       var x = document.getElementsByClassName("box2")
+     
+       console.log("ho")
+    }
+    }
 </script>

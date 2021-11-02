@@ -4,9 +4,946 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://use.typekit.net/emv3zbo.css" rel="stylesheet" crossorigin="anonymous">
     <title>Document</title>
+    <style>
+   /* <-----------HEAD-------------> */
+         #header{
+             width: 100%;
+             height: 74px;
+             font-size: 30px;
+             text-align: center;
+             border-bottom: 1px solid black;
+         }
+   /* <-------------NAV------------------> */
+         .nav{
+            display: flex;
+            padding: 0;
+            flex-wrap: wrap;
+            align-items: center;
+            font-family: ProximaNova-Semibold,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+
+         }
+         .nav > li{
+            list-style-type: none;
+            padding: 3px;
+            font-size: 13px;
+         }
+         .nav > li > a {
+            text-decoration: none;
+            color: #929391;
+         }
+        
+     /* <-----------------> */
+
+     /* <-------------headtitle------------> */
+      .headtitle{
+        font-size: 32px;
+        font-weight: lighter;
+        font-family: ProximaNova-Semibold,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+      }
+      .headtitle > a{
+        text-decoration: none;
+        color:black;
+      }
+    /* <------------------------------------> */
+     
+    /* <------------sort----------> */
+      .sortby{
+          display :flex;
+          flex-flow : row wrap;
+          height:162px;
+          border:1px solid black;
+          padding-top: 20px;
+      }
+      .sortby > div {
+          width: 100 px;
+      }
+      .sortSubDive{
+          display :flex;
+          flex-flow : row wrap;
+          background-color : none;
+      }
+   /* <---------------------------> */
+   /* <--------------Product Page------------------> */
+     #menProd{
+         display : flex;
+         flex-wrap: wrap;
+         flex-direction: row;
+         justify-content: center;
+     }
+     #menProd > .prodSubdiv{
+         width : 23%;
+         padding: 6px;
+         margin-bottom: 10px;
+     }
+     .prodImg{
+         width: 100%;
+     }
+     .prodPrice{
+         margin-top: 3px;
+         margin-bottom: 5px;
+         padding-top:5px;
+         font-size: 16px;
+         font-weight: bold;
+         font-family: ProximaNova-Semibold, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+     }
+    .textdiv > a{
+        text-decoration: none;
+        color: black;
+        font-family: ProximaNova-Regular,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";                
+        font-weight: 100; 
+        font-size: 14px;
+        padding-top: 10px;
+        margin-top:10px; 
+    }
+    /* <----------imgHover-------> */
+    .imgbox {
+        position: relative;
+        display: inline-flex;
+    }
+    /* Next & previous buttons */
+    .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+     width: 20px;
+     height: 25px;
+    color: rgba(255, 255, 255, 0.904);
+    margin :10px;
+    padding-left: 7px;
+    font-weight: bold;
+    background-color: rgba(128, 128, 128, 0.417);
+    border-radius: 100%;
+    font-size: 18px;
+    transition: 0.6s ease;
+    /* border-radius: 0 3px 3px 0; */
+    user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+    right: 0;
+    border-radius: 100%;
+    }
+    </style>
 </head>
 <body>
+
+    <div id="header">HEADER</div>
+    <ol class="nav">
+        <li>
+            <a href="">Home</a>
+        </li>
+        <li>
+            <img src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/right-pointer.svg" width="8px">
+        </li>
+        <li>
+            <a class="" href="">Men</a>
+        </li>
+        <li>
+            <img src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/right-pointer.svg" width="8px">
+        </li>
+        <li>
+            <a class=" " href="">Indian Wear</a>
+        </li>
+    </ol>
+<!----------------------------------------------------->
+    <div>
+        <h1 class="headtitle">
+            <a class="" href="">Indian Wear</a>
+        </h1>
+    </div>
+<!----------------------Sort------------------------------->
+<div class="sortby">
+    <div>
+        <button id="" >
+              <span class="sortSubDive">
+                <div class="tex">Price</div>
+                 <div>
+                  <img src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/down-arrow-black.svg" alt="">
+                 </div>
+             </span>
+
+        </button>  
+    </div>
+    <div>
+        <button id="" >
+              <span class="sortSubDive">
+                <div class="tex">Price</div>
+                 <div>
+                  <img src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/down-arrow-black.svg" alt="">
+                 </div>
+             </span>
+        </button>  
+    </div>
+    <div>
+        <button id="">
+              <span class="sortSubDive">
+                <div class="tex">Price</div>
+                 <div>
+                  <img src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/down-arrow-black.svg" alt="">
+                 </div>
+             </span>
+
+        </button>  
+    </div>
+    <div>
+        <button id="" >
+              <span class="sortSubDive">
+                <div class="tex">Price</div>
+                 <div>
+                  <img src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/down-arrow-black.svg" alt="">
+                 </div>
+             </span>
+
+        </button>  
+    </div> 
+    <div>
+        <button id="">
+              <span class="sortSubDive">
+                <div class="tex">Price</div>
+                 <div>
+                  <img src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/down-arrow-black.svg" alt="">
+                 </div>
+             </span>
+
+        </button>  
+    </div>
+    <div>
+        <button id="">
+              <span class="sortSubDive">
+                <div class="tex">Price</div>
+                 <div>
+                  <img src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/down-arrow-black.svg" alt="">
+                 </div>
+             </span>
+
+        </button>  
+    </div>
+    <div>
+        <button >
+              <span class="sortSubDive">
+                <div class="tex">Price</div>
+                 <div>
+                  <img src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/down-arrow-black.svg" alt="">
+                 </div>
+             </span>
+
+        </button>  
+    </div>
+    <div>
+        <button id="">
+              <span class="sortSubDive">
+                <div class="tex">Price</div>
+                 <div>              <img src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/down-arrow-black.svg" alt="">
+                 </div>           
+        </button>  
+     </span>
+     </div>
+    <div>
+        <button id="">
+              <span class="sortSubDive">
+                <div class="tex">Price</div>
+                 <div>
+                  <img src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/down-arrow-black.svg" alt="">
+                 </div>
+             </span>
+
+        </button>  
+    </div>   
+</div>
+ <!------------------------------------------------------>
+<div class="sortByPr"> 
+    <select id="sortByPrice" onchange="handlePriceSort()" >
+        <option value=" ">sort by price</option>
+        <option value="low">Low To High</option>
+        <option value="high">High To Low</option>
+    </select>
+</div>
+<!-- <---------------DISPLAY MEN PRODUCTS---------------------->
+ <div id="menProd">
     
+</div>
+
 </body>
+ <script>
+
+    // <--------------Men Product Data---------------->
+    var data =[
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769043-Red-Maroon-1000009769043-12082020_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769043-Red-Maroon-1000009769043-12082020_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769043-Red-Maroon-1000009769043-12082020_05-2100.jpg",
+        price:"799",
+        color:"red",
+        name:"MAX Textured Short Kurta with Patch Pocket"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324470-Blue-Navy-1000010324470-8272021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324470-Blue-Navy-1000010324470-8272021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324470-Blue-Navy-1000010324470-8272021_05-2100.jpg",
+        price:"899",
+        color:"red",
+        name:"MAX Printed Full Sleeves Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769004-Blue-Blue-1000009769004-12082020_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769004-Blue-Blue-1000009769004-12082020_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769004-Blue-Blue-1000009769004-12082020_05-2100.jpg",
+        price:"899",
+        color:"red",
+        name:"MAX Solid Band-Collar Shirt Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-Orange-Orange-1000010571700-10202021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-Orange-Orange-1000010571700-10202021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-Orange-Orange-1000010571700-10202021_05-2100.jpg",
+        price:"799",
+        color:"red",
+        name:"MAX Solid Regular Fit Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324612-White-White-1000010324612-8052021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324612-White-White-1000010324612-8052021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324612-White-White-1000010324612-8052021_05-2100.jpg",
+        price:"999",
+        color:"red",
+        name:"MAX Striped Full Sleeves Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571613-Blue-Blue-1000010571613-10072021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571613-Blue-Blue-1000010571613-10072021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571613-Blue-Blue-1000010571613-10072021_05-2100.jpg",
+        price:"999",
+        color:"red",
+        name:"MAX Striped Band Collar Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071226-Orange-Orange-1000010071226-7222021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071226-Orange-Orange-1000010071226-7222021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071226-Orange-Orange-1000010071226-7222021_05-2100.jpg",
+        price:"899",
+        color:"red",
+        name:"MAX Printed Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-Red-Red-1000010571700-10072021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-Red-Red-1000010571700-10072021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-Red-Red-1000010571700-10072021_05-2100.jpg",
+        price:"799",
+        color:"red",
+        name:"MAX Solid Short Straight Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571742-Red-Maroon-1000010571742-9292021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571742-Red-Maroon-1000010571742-9292021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571742-Red-Maroon-1000010571742-9292021_05-2100.jpg",
+        price:"799",
+        color:"red",
+        name:"MAX Solid Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-White-White-1000010571700-10072021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-White-White-1000010571700-10072021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-White-White-1000010571700-10072021_05-2100.jpg",
+        price:"899",
+        color:"red",
+        name:"MAX Solid Short Straight Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324560-Orange-Rust-1000010324560-8272021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324560-Orange-Rust-1000010324560-8272021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324560-Orange-Rust-1000010324560-8272021_05-2100.jpg",
+        price:"999",
+        color:"red",
+        name:"MAX Printed Full Sleeves Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571667-Red-Maroon-1000010571667-10072021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571667-Red-Maroon-1000010571667-10072021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571667-Red-Maroon-1000010571667-10072021_05-2100.jpg",
+        price:"799",
+        color:"red",
+        name:"MAX Printed Full Sleeves Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010519112-Beige-Beige-1000010519112-9292021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010519112-Beige-Beige-1000010519112-9292021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010519112-Beige-Beige-1000010519112-9292021_05-2100.jpg",
+        price:"799",
+        color:"red",
+        name:"MAX Solid Band Collar Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071109-Beige-OffWhite-1000010071109-7222021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071109-Beige-OffWhite-1000010071109-7222021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071109-Beige-OffWhite-1000010071109-7222021_05-2100.jpg",
+        price:"899",
+        color:"red",
+        name:"MAX Striped Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071135-Orange-Rustc-1000010071135-7072021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071135-Orange-Rustc-1000010071135-7072021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071135-Orange-Rustc-1000010071135-7072021_05-2100.jpg",
+        price:"999",
+        color:"red",
+        name:"MAX Printed Full Sleeves Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010122132-White-White-1000010122132-2202021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010122132-White-White-1000010122132-2202021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010122132-White-White-1000010122132-2202021_05-2100.jpg",
+        price:"799",
+        color:"red",
+        name:"MAX Solid Shirt Kurta with Band Collar"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769030-Green-Oliveg-1000009769030-12162020_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769030-Green-Oliveg-1000009769030-12162020_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769030-Green-Oliveg-1000009769030-12162020_05-2100.jpg",
+        price:"999",
+        color:"red",
+        name:"MAX Textured Full Sleeves Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324470-Green-Oliveg-1000010324470-8272021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324470-Green-Oliveg-1000010324470-8272021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324470-Green-Oliveg-1000010324470-8272021_05-2100.jpg",
+        price:"1299",
+        color:"red",
+        name:"MAX Printed Full Sleeves Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071239-Blue-Navy-1000010071239-7072021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071239-Blue-Navy-1000010071239-7072021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071239-Blue-Navy-1000010071239-7072021_05-2100.jpg",
+        price:"799",
+        color:"red",
+        name:"MAX Solid Full Sleeves Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010141354-Beige-Beige-1000010141354-8052021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010141354-Beige-Beige-1000010141354-8052021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010141354-Beige-Beige-1000010141354-8052021_05-2100.jpg",
+        price:"899",
+        color:"red",
+        name:"MAX Printed Slim Fit Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769043-Red-Maroon-1000009769043-12082020_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769043-Red-Maroon-1000009769043-12082020_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769043-Red-Maroon-1000009769043-12082020_05-2100.jpg",
+        price:"799",
+        color:"red",
+        name:"MAX Textured Short Kurta with Patch Pocket"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324470-Blue-Navy-1000010324470-8272021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324470-Blue-Navy-1000010324470-8272021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324470-Blue-Navy-1000010324470-8272021_05-2100.jpg",
+        price:"899",
+        color:"red",
+        name:"MAX Printed Full Sleeves Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769004-Blue-Blue-1000009769004-12082020_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769004-Blue-Blue-1000009769004-12082020_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769004-Blue-Blue-1000009769004-12082020_05-2100.jpg",
+        price:"899",
+        color:"red",
+        name:"MAX Solid Band-Collar Shirt Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-Orange-Orange-1000010571700-10202021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-Orange-Orange-1000010571700-10202021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-Orange-Orange-1000010571700-10202021_05-2100.jpg",
+        price:"799",
+        color:"red",
+        name:"MAX Solid Regular Fit Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324612-White-White-1000010324612-8052021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324612-White-White-1000010324612-8052021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324612-White-White-1000010324612-8052021_05-2100.jpg",
+        price:"999",
+        color:"red",
+        name:"MAX Striped Full Sleeves Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571613-Blue-Blue-1000010571613-10072021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571613-Blue-Blue-1000010571613-10072021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571613-Blue-Blue-1000010571613-10072021_05-2100.jpg",
+        price:"999",
+        color:"red",
+        name:"MAX Striped Band Collar Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071226-Orange-Orange-1000010071226-7222021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071226-Orange-Orange-1000010071226-7222021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071226-Orange-Orange-1000010071226-7222021_05-2100.jpg",
+        price:"899",
+        color:"red",
+        name:"MAX Printed Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-Red-Red-1000010571700-10072021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-Red-Red-1000010571700-10072021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-Red-Red-1000010571700-10072021_05-2100.jpg",
+        price:"799",
+        color:"red",
+        name:"MAX Solid Short Straight Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571742-Red-Maroon-1000010571742-9292021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571742-Red-Maroon-1000010571742-9292021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571742-Red-Maroon-1000010571742-9292021_05-2100.jpg",
+        price:"799",
+        color:"red",
+        name:"MAX Solid Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-White-White-1000010571700-10072021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-White-White-1000010571700-10072021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-White-White-1000010571700-10072021_05-2100.jpg",
+        price:"899",
+        color:"red",
+        name:"MAX Solid Short Straight Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324560-Orange-Rust-1000010324560-8272021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324560-Orange-Rust-1000010324560-8272021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324560-Orange-Rust-1000010324560-8272021_05-2100.jpg",
+        price:"999",
+        color:"red",
+        name:"MAX Printed Full Sleeves Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571667-Red-Maroon-1000010571667-10072021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571667-Red-Maroon-1000010571667-10072021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571667-Red-Maroon-1000010571667-10072021_05-2100.jpg",
+        price:"799",
+        color:"red",
+        name:"MAX Printed Full Sleeves Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010519112-Beige-Beige-1000010519112-9292021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010519112-Beige-Beige-1000010519112-9292021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010519112-Beige-Beige-1000010519112-9292021_05-2100.jpg",
+        price:"799",
+        color:"red",
+        name:"MAX Solid Band Collar Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071109-Beige-OffWhite-1000010071109-7222021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071109-Beige-OffWhite-1000010071109-7222021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071109-Beige-OffWhite-1000010071109-7222021_05-2100.jpg",
+        price:"899",
+        color:"red",
+        name:"MAX Striped Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071135-Orange-Rustc-1000010071135-7072021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071135-Orange-Rustc-1000010071135-7072021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071135-Orange-Rustc-1000010071135-7072021_05-2100.jpg",
+        price:"999",
+        color:"red",
+        name:"MAX Printed Full Sleeves Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010122132-White-White-1000010122132-2202021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010122132-White-White-1000010122132-2202021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010122132-White-White-1000010122132-2202021_05-2100.jpg",
+        price:"799",
+        color:"red",
+        name:"MAX Solid Shirt Kurta with Band Collar"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769030-Green-Oliveg-1000009769030-12162020_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769030-Green-Oliveg-1000009769030-12162020_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769030-Green-Oliveg-1000009769030-12162020_05-2100.jpg",
+        price:"999",
+        color:"red",
+        name:"MAX Textured Full Sleeves Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324470-Green-Oliveg-1000010324470-8272021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324470-Green-Oliveg-1000010324470-8272021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324470-Green-Oliveg-1000010324470-8272021_05-2100.jpg",
+        price:"1299",
+        color:"red",
+        name:"MAX Printed Full Sleeves Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071239-Blue-Navy-1000010071239-7072021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071239-Blue-Navy-1000010071239-7072021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071239-Blue-Navy-1000010071239-7072021_05-2100.jpg",
+        price:"799",
+        color:"red",
+        name:"MAX Solid Full Sleeves Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010141354-Beige-Beige-1000010141354-8052021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010141354-Beige-Beige-1000010141354-8052021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010141354-Beige-Beige-1000010141354-8052021_05-2100.jpg",
+        price:"899",
+        color:"red",
+        name:"MAX Printed Slim Fit Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769043-Red-Maroon-1000009769043-12082020_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769043-Red-Maroon-1000009769043-12082020_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769043-Red-Maroon-1000009769043-12082020_05-2100.jpg",
+        price:"799",
+        color:"red",
+        name:"MAX Textured Short Kurta with Patch Pocket"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324470-Blue-Navy-1000010324470-8272021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324470-Blue-Navy-1000010324470-8272021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324470-Blue-Navy-1000010324470-8272021_05-2100.jpg",
+        price:"899",
+        color:"red",
+        name:"MAX Printed Full Sleeves Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769004-Blue-Blue-1000009769004-12082020_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769004-Blue-Blue-1000009769004-12082020_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769004-Blue-Blue-1000009769004-12082020_05-2100.jpg",
+        price:"899",
+        color:"red",
+        name:"MAX Solid Band-Collar Shirt Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-Orange-Orange-1000010571700-10202021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-Orange-Orange-1000010571700-10202021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-Orange-Orange-1000010571700-10202021_05-2100.jpg",
+        price:"799",
+        color:"red",
+        name:"MAX Solid Regular Fit Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324612-White-White-1000010324612-8052021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324612-White-White-1000010324612-8052021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324612-White-White-1000010324612-8052021_05-2100.jpg",
+        price:"999",
+        color:"red",
+        name:"MAX Striped Full Sleeves Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571613-Blue-Blue-1000010571613-10072021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571613-Blue-Blue-1000010571613-10072021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571613-Blue-Blue-1000010571613-10072021_05-2100.jpg",
+        price:"999",
+        color:"red",
+        name:"MAX Striped Band Collar Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071226-Orange-Orange-1000010071226-7222021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071226-Orange-Orange-1000010071226-7222021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071226-Orange-Orange-1000010071226-7222021_05-2100.jpg",
+        price:"899",
+        color:"red",
+        name:"MAX Printed Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-Red-Red-1000010571700-10072021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-Red-Red-1000010571700-10072021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-Red-Red-1000010571700-10072021_05-2100.jpg",
+        price:"799",
+        color:"red",
+        name:"MAX Solid Short Straight Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571742-Red-Maroon-1000010571742-9292021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571742-Red-Maroon-1000010571742-9292021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571742-Red-Maroon-1000010571742-9292021_05-2100.jpg",
+        price:"799",
+        color:"red",
+        name:"MAX Solid Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-White-White-1000010571700-10072021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-White-White-1000010571700-10072021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-White-White-1000010571700-10072021_05-2100.jpg",
+        price:"899",
+        color:"red",
+        name:"MAX Solid Short Straight Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324560-Orange-Rust-1000010324560-8272021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324560-Orange-Rust-1000010324560-8272021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324560-Orange-Rust-1000010324560-8272021_05-2100.jpg",
+        price:"999",
+        color:"red",
+        name:"MAX Printed Full Sleeves Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571667-Red-Maroon-1000010571667-10072021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571667-Red-Maroon-1000010571667-10072021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571667-Red-Maroon-1000010571667-10072021_05-2100.jpg",
+        price:"799",
+        color:"red",
+        name:"MAX Printed Full Sleeves Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010519112-Beige-Beige-1000010519112-9292021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010519112-Beige-Beige-1000010519112-9292021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010519112-Beige-Beige-1000010519112-9292021_05-2100.jpg",
+        price:"799",
+        color:"red",
+        name:"MAX Solid Band Collar Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071109-Beige-OffWhite-1000010071109-7222021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071109-Beige-OffWhite-1000010071109-7222021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071109-Beige-OffWhite-1000010071109-7222021_05-2100.jpg",
+        price:"899",
+        color:"red",
+        name:"MAX Striped Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071135-Orange-Rustc-1000010071135-7072021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071135-Orange-Rustc-1000010071135-7072021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071135-Orange-Rustc-1000010071135-7072021_05-2100.jpg",
+        price:"999",
+        color:"red",
+        name:"MAX Printed Full Sleeves Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010122132-White-White-1000010122132-2202021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010122132-White-White-1000010122132-2202021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010122132-White-White-1000010122132-2202021_05-2100.jpg",
+        price:"799",
+        color:"red",
+        name:"MAX Solid Shirt Kurta with Band Collar"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769030-Green-Oliveg-1000009769030-12162020_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769030-Green-Oliveg-1000009769030-12162020_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769030-Green-Oliveg-1000009769030-12162020_05-2100.jpg",
+        price:"999",
+        color:"red",
+        name:"MAX Textured Full Sleeves Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324470-Green-Oliveg-1000010324470-8272021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324470-Green-Oliveg-1000010324470-8272021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324470-Green-Oliveg-1000010324470-8272021_05-2100.jpg",
+        price:"1299",
+        color:"red",
+        name:"MAX Printed Full Sleeves Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071239-Blue-Navy-1000010071239-7072021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071239-Blue-Navy-1000010071239-7072021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071239-Blue-Navy-1000010071239-7072021_05-2100.jpg",
+        price:"799",
+        color:"red",
+        name:"MAX Solid Full Sleeves Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010141354-Beige-Beige-1000010141354-8052021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010141354-Beige-Beige-1000010141354-8052021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010141354-Beige-Beige-1000010141354-8052021_05-2100.jpg",
+        price:"899",
+        color:"red",
+        name:"MAX Printed Slim Fit Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769043-Red-Maroon-1000009769043-12082020_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769043-Red-Maroon-1000009769043-12082020_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769043-Red-Maroon-1000009769043-12082020_05-2100.jpg",
+        price:"799",
+        color:"red",
+        name:"MAX Textured Short Kurta with Patch Pocket"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324470-Blue-Navy-1000010324470-8272021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324470-Blue-Navy-1000010324470-8272021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324470-Blue-Navy-1000010324470-8272021_05-2100.jpg",
+        price:"899",
+        color:"red",
+        name:"MAX Printed Full Sleeves Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769004-Blue-Blue-1000009769004-12082020_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769004-Blue-Blue-1000009769004-12082020_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769004-Blue-Blue-1000009769004-12082020_05-2100.jpg",
+        price:"899",
+        color:"red",
+        name:"MAX Solid Band-Collar Shirt Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-Orange-Orange-1000010571700-10202021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-Orange-Orange-1000010571700-10202021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-Orange-Orange-1000010571700-10202021_05-2100.jpg",
+        price:"799",
+        color:"red",
+        name:"MAX Solid Regular Fit Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324612-White-White-1000010324612-8052021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324612-White-White-1000010324612-8052021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324612-White-White-1000010324612-8052021_05-2100.jpg",
+        price:"999",
+        color:"red",
+        name:"MAX Striped Full Sleeves Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571613-Blue-Blue-1000010571613-10072021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571613-Blue-Blue-1000010571613-10072021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571613-Blue-Blue-1000010571613-10072021_05-2100.jpg",
+        price:"999",
+        color:"red",
+        name:"MAX Striped Band Collar Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071226-Orange-Orange-1000010071226-7222021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071226-Orange-Orange-1000010071226-7222021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071226-Orange-Orange-1000010071226-7222021_05-2100.jpg",
+        price:"899",
+        color:"red",
+        name:"MAX Printed Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-Red-Red-1000010571700-10072021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-Red-Red-1000010571700-10072021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-Red-Red-1000010571700-10072021_05-2100.jpg",
+        price:"799",
+        color:"red",
+        name:"MAX Solid Short Straight Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571742-Red-Maroon-1000010571742-9292021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571742-Red-Maroon-1000010571742-9292021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571742-Red-Maroon-1000010571742-9292021_05-2100.jpg",
+        price:"799",
+        color:"red",
+        name:"MAX Solid Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-White-White-1000010571700-10072021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-White-White-1000010571700-10072021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-White-White-1000010571700-10072021_05-2100.jpg",
+        price:"899",
+        color:"red",
+        name:"MAX Solid Short Straight Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324560-Orange-Rust-1000010324560-8272021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324560-Orange-Rust-1000010324560-8272021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324560-Orange-Rust-1000010324560-8272021_05-2100.jpg",
+        price:"999",
+        color:"red",
+        name:"MAX Printed Full Sleeves Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571667-Red-Maroon-1000010571667-10072021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571667-Red-Maroon-1000010571667-10072021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571667-Red-Maroon-1000010571667-10072021_05-2100.jpg",
+        price:"799",
+        color:"red",
+        name:"MAX Printed Full Sleeves Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010519112-Beige-Beige-1000010519112-9292021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010519112-Beige-Beige-1000010519112-9292021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010519112-Beige-Beige-1000010519112-9292021_05-2100.jpg",
+        price:"799",
+        color:"red",
+        name:"MAX Solid Band Collar Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071109-Beige-OffWhite-1000010071109-7222021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071109-Beige-OffWhite-1000010071109-7222021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071109-Beige-OffWhite-1000010071109-7222021_05-2100.jpg",
+        price:"899",
+        color:"red",
+        name:"MAX Striped Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071135-Orange-Rustc-1000010071135-7072021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071135-Orange-Rustc-1000010071135-7072021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071135-Orange-Rustc-1000010071135-7072021_05-2100.jpg",
+        price:"999",
+        color:"red",
+        name:"MAX Printed Full Sleeves Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010122132-White-White-1000010122132-2202021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010122132-White-White-1000010122132-2202021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010122132-White-White-1000010122132-2202021_05-2100.jpg",
+        price:"799",
+        color:"red",
+        name:"MAX Solid Shirt Kurta with Band Collar"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769030-Green-Oliveg-1000009769030-12162020_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769030-Green-Oliveg-1000009769030-12162020_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769030-Green-Oliveg-1000009769030-12162020_05-2100.jpg",
+        price:"999",
+        color:"red",
+        name:"MAX Textured Full Sleeves Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324470-Green-Oliveg-1000010324470-8272021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324470-Green-Oliveg-1000010324470-8272021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324470-Green-Oliveg-1000010324470-8272021_05-2100.jpg",
+        price:"1299",
+        color:"red",
+        name:"MAX Printed Full Sleeves Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071239-Blue-Navy-1000010071239-7072021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071239-Blue-Navy-1000010071239-7072021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071239-Blue-Navy-1000010071239-7072021_05-2100.jpg",
+        price:"799",
+        color:"red",
+        name:"MAX Solid Full Sleeves Short Kurta"},
+        
+        {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010141354-Beige-Beige-1000010141354-8052021_01-2100.jpg",
+        image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010141354-Beige-Beige-1000010141354-8052021_03-2100.jpg",
+        image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010141354-Beige-Beige-1000010141354-8052021_05-2100.jpg",
+        price:"899",
+        color:"red",
+        name:"MX Printed Slim Fit Kurta"}
+        ]
+    
+  
+   var mProducts = JSON.parse(localStorage.getItem("menProdData"))
+   localStorage.setItem("menProdData", JSON.stringify(data))
+   display(mProducts)
+  // <----------------------SORT BY PRICE------------------------>
+   function handlePriceSort(){
+     var selected = document.getElementById("sortByPrice").value;
+        if (selected =="low"){
+          mProducts = mProducts.sort(function (a, b) {
+             return a.price-b.price
+            });
+            display(mProducts);
+            console.log(mProducts)
+        }
+        if (selected =="high"){
+          mProducts = mProducts.sort(function (a, b) {
+             return b.price-a.price
+            });
+            display(mProducts);
+            console.log(mProducts)
+        }
+      
+   }
+// <----------------------------------->
+   function display(mProducts) {
+    var menProducts = document.getElementById("menProd") 
+    var i=0; 
+    mProducts.map(function(el){
+        var div =document.createElement("div")
+            div.setAttribute("class", `prodSubdiv `)
+            var div1 = document.createElement("div")
+                div1.setAttribute("class", "imgbox")
+                var img1 = document.createElement("img")
+                    img1.setAttribute("class", `prodImg imghover${i} `)
+                    img1.setAttribute("src", el.image1)
+                // var img2 = document.createElement("img")
+                //     img2.setAttribute("class", `prodImg imghover${i} `)
+                //     img2.setAttribute("src", el.image1)
+                // var img3 = document.createElement("img")
+                //     img3.setAttribute("class", `prodImg imghover${i} `)
+                //     img3.setAttribute("src", el.image1)
+                    i++
+                var a1 = document.createElement("a")
+                    a1.setAttribute("class", "prev")
+                    // a1.setAttribute("onclick", "plusSlide(-1)")
+                    a1.textContent="<"
+                var a2 = document.createElement("a")
+                    a2.setAttribute("class", "next")
+                    // a2.setAttribute("onclick", "currentSlide(1)")
+                    a2.textContent = ">"    
+            div1.append(img1,a1,a2)
+            var div2 = document.createElement("div")
+                div2.setAttribute("class", "textdiv")
+                var price = document.createElement("h4")
+                price.setAttribute("class", "prodPrice")
+                price.textContent = `₹${el.price}`
+                var name = document.createElement("h4")
+                name.setAttribute("class", "prodName")
+                name.textContent = el.name
+                var a = document.createElement("a")
+                a.setAttribute("href", " ")
+                a.append(name.textContent)
+            div2.append(price,a)  
+            
+            div.append(div1,div2)
+            menProducts.append(div)
+        })
+   }
+    
+
+    // function showit(a1,a2){
+        // var x = document.getElementById("sl")
+        // a1.style.display="block"
+        // var y = document.getElementById("l")
+    //     a2.style.display="block"    
+    //  }
+    // function hideit(a1,a2){
+    //   var x = document.getElementById("sl")
+    //   a1.style.display="none"
+    //   var y = document.getElementById("l")
+    //   a2.style.display="none"
+    // }
+// var slideIndex = 1;
+// showSlides(slideIndex);
+
+// function plusSlides(n) {
+//   showSlides(slideIndex += n);
+// }
+
+// function currentSlide(n) {
+//   showSlides(slideIndex = n);
+// }
+// var slides = document.getElementsByClassName("imgbox")
+
+// for(var i=0; i<slides.length; i++){
+//     var subslides = document.getElementsByClassName(`imghover${1}`);
+//   for(var j=0; j<subslides.length; j++){
+//     console.log(subslides[j])
+//     subslides[j].style.display = "none";
+//   }
+// }
+
+// function showSlides(n) {
+//   var slides = document.getElementsByClassName("prodImg");
+//   if (n > slides.length)
+//    {slideIndex = 1}    
+//   if (n < 1) {slideIndex = slides.length}
+//   for (i = 0; i < slides.length; i++) {
+//       slides[i].style.display = "none ";  
+//   }
+//   slides[slideIndex-1].style.display = "block";  
+// }
+
+ </script>
 </html>

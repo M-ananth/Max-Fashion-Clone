@@ -857,6 +857,7 @@
    }
 // <----------------------------------->
    function display(mProducts) {
+   document.querySelector("#menProd").innerHTML="" 
     var menProducts = document.getElementById("menProd") 
     var i=0; 
     mProducts.map(function(el){
@@ -898,6 +899,7 @@
             
             div.append(div1,div2)
             menProducts.append(div)
+            
         })
    }
     

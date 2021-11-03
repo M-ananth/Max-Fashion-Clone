@@ -109,7 +109,8 @@
         position: absolute;
         top: 5%; 
         right:15px;
-        padding: 10px; 
+        padding: 10px;
+        
         background-color: whitesmoke;
         border-radius: 50%;
         /* transition: 0.6s ease; */
@@ -883,14 +884,14 @@
                     i++
                 var heart = document.createElement("i")
                     heart.setAttribute("class","far fa-heart heart")
-                    heart.addEventListener("click", function(e){
-                        heart.setAttribute("class","fas fa-heart heart")
-                        heart.style.color = "red";
-                    })
-                    heart.addEventListener("dblclick", function(e){
-                        heart.setAttribute("class","far fa-heart heart")
-                        heart.style.color = "black";
-                    })
+                  heart.addEventListener("click", function(e){
+                      heart.setAttribute("class","fas fa-heart heart")
+                      heart.style.color = "red";
+                  })
+                  heart.addEventListener("dblclick", function(e){
+                    heart.setAttribute("class","far fa-heart heart")
+                      heart.style.color = "black";
+                  })
                 var a1 = document.createElement("i")
                     a1.setAttribute("class", "fas fa-less-than prev")
                     // a1.setAttribute("onclick", "plusSlide(-1)")

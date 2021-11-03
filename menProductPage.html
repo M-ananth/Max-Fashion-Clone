@@ -117,6 +117,7 @@
         user-select: none;  
     }
     .prev, .next {
+        display:none;
         cursor: pointer;
         position: absolute;
         top: 45%;
@@ -869,11 +870,25 @@
     mProducts.map(function(el){
         var div =document.createElement("div")
             div.setAttribute("class", `prodSubdiv`)
+            div.addEventListener("mouseover", function(){
+                       a1.style.display = "block"
+                       a2.style.display = "block"
+            })
+            div.addEventListener("mouseleave", function(){
+                       a1.style.display = "none"
+                       a2.style.display = "none"
+            })
+            // div.addEventListener("onmousleave", function(){
+            //         a1.style.display = "none"
+            //         a2.style.display = "none"
+            // })
             var div1 = document.createElement("div")
                 div1.setAttribute("class", "imgbox")
+                
                 var img1 = document.createElement("img")
                     img1.setAttribute("class", `prodImg imghover${i} `)
                     img1.setAttribute("src", el.image1)
+                    
                     // img1.addEventListener("onclick", showit())
                 // var img2 = document.createElement("img")
                 //     img2.setAttribute("class", `prodImg imghover${i} `)

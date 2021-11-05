@@ -99,7 +99,7 @@
         <div id="lastBox">
             <div id="withMail" class="inl"><p class="mail" style="font-size: 14px">Login with email? &nbsp;<a href="">Click here</a></p></div>
             <div id="continueBtn" class="inl">
-                <button id="btn">Continue</button>
+                <button id="btn"><a href="otp.html">Continue</a></button>
             </div>
         </div>
     </div>
@@ -114,24 +114,20 @@
 </html>
 
 <script>
-    document.querySelector("button").addEventListener("click", signUp);
+    document.querySelector("#btn").addEventListener("click", signUp);
     var userArr = JSON.parse(localStorage.getItem("userData")) || [];
 
     function signUp(){
-        var email = document.getElementById("email").value;
-        var pass = document.getElementById("pass").value;
-        var user = document.getElementById("user").value;
+      
         var mobile = document.getElementById("number").value;
 
         var userCredentials = {
-            emailAddress: email,
-            passWord: pass,
-            userName: user,
+           
             mobileNo: mobile,
         };
         userArr.push(userCredentials);
         localStorage.setItem("userData", JSON.stringify(userArr));
-        window.location.href = "signin.html";
+        window.location.href = "sign.html";
     }
 
 </script>

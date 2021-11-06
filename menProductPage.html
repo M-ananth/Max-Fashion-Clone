@@ -58,22 +58,19 @@
           margin-bottom: 10px;
       }
       .sortby > div {
-          /* width:140px; */
-          /* margin-right: 20px; */
-          /* border:1px solid red; */
             width: 192px;
             margin:10px;
             border: 1px solid rgba(128, 128, 128, 0.123);
-            font-size: 14px;
             font-family: ProximaNova-Semibold,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
             font-weight: normal;
-                 }
+      }
       .sortby > div > select {
           width: 192px;
           padding: 6px;
-          border: none;     
+          border: none; 
+          font-size: 12px;  
+          color: #5d5e5c;  
       }
-
    /* <---------------------------> */
    .sortByPr{
         font-family: ProximaNova-Semibold, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; 
@@ -100,7 +97,7 @@
          display : flex;
          flex-wrap: wrap;
          flex-direction: row;
-         justify-content: center;
+         justify-content:flex-start
      }
      #menProd > .prodSubdiv{
          width : 23%;
@@ -204,6 +201,26 @@
           background-color: #ffffff;
       }
 /* <--------------------------------------------> */
+ 
+/* <----------------Media Query---------------------> */
+
+@media screen and (min-width: 500px) and (max-width:615px) {
+    #menProd > .prodSubdiv{
+         width : 30%;
+     }
+}
+@media screen and (min-width: 290px) and (max-width: 500px) {
+    #menProd > .prodSubdiv{
+         width : 45%;
+     }
+}
+@media screen and (min-width: 0px) and (max-width: 290px) {
+    #menProd > .prodSubdiv{
+         width : 98%;
+     }
+}
+
+
     </style>
 </head>
 <body>
@@ -243,58 +260,65 @@
     <div>
         <select>
             <option value="style">Style</option>
-            <option value="low">Low To High</option>
-            <option value="medium">High To Low</option>
+            <option value="traditional">traditional</option>
+            <option value="casual">Casual</option>
+            <option value="occasion">Occasion</option>
         </select></div>
     <div>
         <select>
-            <option value="Price">Price</option>
-            <option value="low">Low To High</option>
-            <option value="medium">High To Low</option>
+            <option value="Price">Design</option>
+            <option value="printed">Printed</option>
+            <option value="solid">Solid</option>
+            <option value="textured">Textured</option>
+            <option value="stripes">Stripes</option>
         </select></div>
     <div>
         <select>
-            <option value="Price">Price</option>
-            <option value="low">Low To High</option>
-            <option value="medium">High To Low</option>
+            <option value="size">Size</option>
+            <option value="m">M</option>
+            <option value="
+            l">L</option>
+            <option value="s">S</option>
+            <option value="xl">XL</o option>
+            <option value="XXL">XXL</option>
         </select></div>
     <div>
         <select>
-            <option value="Price">Price</option>
-            <option value="low">Low To High</option>
-            <option value="medium">High To Low</option>
+            <option value="color">Color</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="white">White</option>
         </select></div>
     <div>
         <select>
-            <option value="Price">Price</option>
-            <option value="low">Low To High</option>
-            <option value="medium">High To Low</option>
+            <option value="Price">Sleeve Length</option>
+            <option value="full Sleeves">Full Sleeves</option>
+            <option value="half Sleeves">Half Sleeves</option>
         </select></div>
     <div>
         <select>
-            <option value="Price">Price</option>
-            <option value="low">Low To High</option>
-            <option value="medium">High To Low</option>
+            <option value="browse">Browse</option>
+            <option value="new">New</option>
+            <option value="online only">Online Online</option>
         </select></div>
     <div>
         <select>
-            <option value="Price">Price</option>
-            <option value="low">Low To High</option>
-            <option value="medium">High To Low</option>
+            <option value="promotions">Promotions</option>
         </select></div>
     <div>
         <select>
-            <option value="Price">Price</option>
-            <option value="low">Low To High</option>
-            <option value="medium">High To Low</option>
+            <option value="fit">Fit</option>
+            <option value="regular">Regular</option>
+            <option value="slim">Slim</option>
+            <option value="comfort">Comfort</option>
         </select></div>
 </div>
  <!------------------------------------------------------>
 <div class="sortByPr">
     <label for="">Sort by</label> 
     <select id="sortByPrice" onchange="handlePriceSort()" >
-        <option value=" "></option>
-        <option value="new">New Arrivals</option>
+        <option value="new">Relevance</option>
         <option value="low">Low To High</option>
         <option value="high">High To Low</option>
     </select>
@@ -308,7 +332,7 @@
  <script>
 
     // <--------------Men Product Data---------------->
-    var data =[
+var data =[
         {image1 :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769043-Red-Maroon-1000009769043-12082020_01-2100.jpg",
         image2:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769043-Red-Maroon-1000009769043-12082020_03-2100.jpg",
         image3:"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769043-Red-Maroon-1000009769043-12082020_05-2100.jpg",

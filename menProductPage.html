@@ -940,6 +940,14 @@ var data =[
     mProducts.map(function(el){
         var div =document.createElement("div")
             div.setAttribute("class", `prodSubdiv`)
+
+            var productPreview =[]
+            div.addEventListener("click",function(){
+                productPreview.push(el)
+                localStorage.setItem("productPreview",JSON.stringify(el))
+                window.location.href="productpreviewpage.html"
+            })
+
             div.addEventListener("mouseover", function(){
                        a1.style.display = "block"
                        a2.style.display = "block"

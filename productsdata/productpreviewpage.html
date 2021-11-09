@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+#container,#container1{
+    display: flex;
+   gap: 35px;
+  
+}
+#ldiv{
+    display: inline;
+    width: 600px;
+  
+}
+#rdiv{
+    padding-top: 30px;
+}
+span{
+    color: grey;
+    font-size: 20px;
+}
+
+</style>
+<body>
+    <div id="container">
+ 
+    </div>
+    
+       
+</body>
+</html>
+<script>
+    var product = JSON.parse(localStorage.getItem("productPreview"))
+    display(product)
+
+  function display(product){ 
+       
+
+ var nameh4= document.createElement("h4")
+ nameh4.textContent= product.name;
+ var image1= document.createElement("img");
+ image1.setAttribute("id","img1")
+ image1.setAttribute("src",product.image1)
+ var image2= document.createElement("img");
+ image2.setAttribute("id","img2")
+ image2.setAttribute("src",product.image2);
+ var image3= document.createElement("img");
+ image3.setAttribute("id","img3")
+ image3.setAttribute("src",product.image3)
+ var body= document.querySelector("body")
+ var lefdiv = document.createElement("div")
+ lefdiv.setAttribute("id","ldiv")
+ lefdiv.append(nameh4,image1,image2,image3)
+var maindiv = document.getElementById("container")
+ maindiv.append(lefdiv)
+ 
+ var priceh1 = document.createElement("h1");
+ priceh1.setAttribute("id","price")
+ priceh1.innerHTML= `₹${product.price} <span>Inclusive of all taxes</span>`;
+ 
+ var rightdiv=document.createElement("div")
+ rightdiv.setAttribute("id","rdiv")
+ rightdiv.append(priceh1)
+ maindiv.append(rightdiv);
+
+
+ }
+</script>

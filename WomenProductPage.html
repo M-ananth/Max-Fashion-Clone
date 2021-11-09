@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://use.typekit.net/emv3zbo.css" rel="stylesheet" crossorigin="anonymous">
-    <title>Men Products</title>
+    <title>Women Products</title>
     <script src="https://kit.fontawesome.com/9d470135d0.js" crossorigin="anonymous"></script>
     <style>
    /* <-----------HEAD-------------> */
@@ -97,7 +97,6 @@
          display : flex;
          flex-wrap: wrap;
          flex-direction: row;
-         justify-content:flex-start
      }
      #menProd > .prodSubdiv{
          width : 23%;
@@ -161,6 +160,16 @@
     /* Position the "next button" to the right */
     .next {
     right: 0;
+    }
+    .new{
+        position: absolute;
+        top: 86%;
+        right: 7px;
+        padding: 7px;
+        font-family: ProximaNova-Regular,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";                
+        font-weight:bold; 
+        font-size: 11px;
+        background-color: whitesmoke;
     }
     /*---product page div3--*/
       .div3{
@@ -229,7 +238,7 @@
             <img src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/right-pointer.svg" width="8px">
         </li>
         <li>
-            <a class="" href="">Men</a>
+            <a class="" href="">Women</a>
         </li>
         <li>
             <img src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/right-pointer.svg" width="8px">
@@ -313,7 +322,8 @@
 <div class="sortByPr">
     <label for="">Sort by</label> 
     <select id="sortByPrice" onchange="handlePriceSort()" >
-        <option value="new">Relevance</option>
+        <option value="rel">Relevance</option>
+        <option value="new">New Arrival</option>
         <option value="low">Low To High</option>
         <option value="high">High To Low</option>
     </select>
@@ -333,12 +343,14 @@ var data =[
     image3: "https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010641963-Green-Teal-1000010641963-10132021_03-2100.jpg",
     price: "299",
     color: "Green",
+    arriv: "new",
     name: "MAX Printed Round Neck T-shirt"},
     {image1: "https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010172069-Brown-Lightbrn-1000010172069-6252021_01-2100.jpg",
     image2: "https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010172069-Brown-Lightbrn-1000010172069-6252021_02-2100.jpg",
     image3: "https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010172069-Brown-Lightbrn-1000010172069-6252021_05-2100.jpg",
     price: "199",
     color: "Brown",
+    arriv:"new",
     name: "MAX Solid V-neck T-shirt"},
     {image1: "https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010172044-Green-Sage-1000010172044-4092021_01-2100.jpg",
     image2: "https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010172044-Green-Sage-1000010172044-4092021_02-2100.jpg",
@@ -363,6 +375,7 @@ var data =[
     image3: "https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010026724-Red-Red-1000010026724-4092021_05-2100.jpg",
     price: "199",
     color: "red",
+    arriv: "new",
     name: "Max printed Round neck T-shirt"},
     {image1: "https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010159210-Green-Lightg-1000010159210-6252021_01-2100.jpg",
     image2: "https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010159210-Green-Lightg-1000010159210-6252021_02-2100.jpg",
@@ -381,6 +394,7 @@ var data =[
     image3: "https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010159314-Yellow-Yellow-1000010159314-6252021_03-2100.jpg",
     price: "299",
     color: "Yellow",
+    arriv: "new",
     name: "Max printed Round neck T-shirt"},
     {image1: "https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010172307-Blue-Navy-1000010172307-6252021_01-2100.jpg",
     image2: "https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010172307-Blue-Navy-1000010172307-6252021_02-2100.jpg",
@@ -439,6 +453,7 @@ var data =[
         image3: "https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009535536-Yellow-Yellow-1000009535536-10122020_04-2100.jpg",
         price: "249",
         color: "Yellow",
+        arriv: "new",
         name: "MAX Printed Short Sleeves T-shirt",
     },
     {
@@ -455,6 +470,7 @@ var data =[
         image3: "https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010042990-Pink-Pink-1000010042990-3172021_03-2100.jpg",
         price: "249",
         color: "Pink",
+        arriv: "new",
         name: "MAX Printed Round Neck T-shirt",
     },
 ]
@@ -466,15 +482,20 @@ var data =[
    function handlePriceSort(){
      var selected = document.getElementById("sortByPrice").value;
         if (selected =="low"){
-          mProducts = mProducts.sort(function (a, b) {
+            mProducts = mProducts.sort(function (a, b) {
              return a.price-b.price
             });
             display(mProducts);
         }
         else if (selected =="high"){
-          mProducts = mProducts.sort(function (a, b) {
+            mProducts = mProducts.sort(function (a, b) {
              return b.price-a.price
             });
+            display(mProducts);
+        }else if (selected =="new"){
+            mProducts = mProducts.filter(function (el) {
+                return el.arriv == "new"
+            })
             display(mProducts);
         }
    }
@@ -531,8 +552,15 @@ var data =[
                 var a2 = document.createElement("i")
                     a2.setAttribute("class", "fas fa-greater-than next")
                     // a2.setAttribute("onclick", "currentSlide(1)")    
-            div1.append(img1,a1,a2,heart)
-            var div2 = document.createElement("div")
+                    if(el.arriv == "new"){
+                        var arriv = document.createElement("p")
+                        arriv.setAttribute("class","new")
+                        arriv.textContent= "NEW"
+                        div1.append(img1,a1,a2,heart,arriv)
+                    }else if(el.arriv == undefined) {
+                        div1.append(img1,a1,a2,heart)
+                    }        
+         var div2 = document.createElement("div")
                 div2.setAttribute("class", "textdiv")
                 var price = document.createElement("h4")
                 price.setAttribute("class", "prodPrice")

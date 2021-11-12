@@ -12,12 +12,28 @@
         #left{
             height:fit-content;
             width: 70%;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+             padding: 20px;
             /* height: 600px; */
         }
         #right{
             width: 25%;
             height: 200px;
             padding-top: 14px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        #tp{
+            padding-left: 20px;
+            font-size: 20px;
+        }
+        .rdiv{
+            border-bottom: 1px solid gray;
+        }
+        .hd {
+            border-bottom: 1px solid gray;
+        }
+        .hd > div{
+            border-right: 1px solid gray;
         }
         #left>div{
             height: 200px;
@@ -148,6 +164,10 @@
             margin-top: -50px;
         }
        #div{display: flex;}
+       /* .ig{
+           width: 200px;
+           height: 50px;
+       } */
     </style>
 </head>
 <body>
@@ -168,7 +188,7 @@
         </div>
         <div style="display: flex; gap: 20px;">
             <div id="left">
-                <div style="height: 30px; ">
+                <div class="hd" style="height: 30px; ">
                     <div id="f">Item</div>
                     <div>Description</div>
                     <div>Price</div>
@@ -183,15 +203,7 @@
                 <div id="tp"></div>
                 <div> <button id="btn">Checkout Now</button> </div>     
                 <div>
-                    <img src="https://www.paypalobjects.com/webstatic/mktg/logo-center/PP_Acceptance_Marks_for_LogoCenter_266x142.png" alt="">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Visa.svg/263px-Visa.svg.png" alt="">
-                    <img src="https://brand.mastercard.com/content/dam/mccom/brandcenter/thumbnails/mastercard_vrt_pos_92px_2x.png" alt="">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Rupay-Logo.png/1200px-Rupay-Logo.png" alt="">
-                    <img src="https://i1.lmsin.net/website_images/ae/checkout/logo-cash.png" alt="">
-                    <img src="https://i1.lmsin.net/website_images/in/checkout/logo-netbanking.svg" alt="">
-                    <img src="https://i1.lmsin.net/website_images/in/checkout/logo-wallet.svg" alt="">
-                    <img src="https://i1.lmsin.net/website_images/in/checkout/logo-rewards.svg" alt="">
-                    
+                    <img style="width: 100%; height:100px"  class="ig" src="z.png" alt="">
                 </div>
             </div>
         </div>

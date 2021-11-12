@@ -47,15 +47,19 @@
             /* border: 1px solid green; */
         }
         #btn{
+            background-color: #303ab2;
+            border-color: #303ab2;
+            box-shadow: 0 3px 4px 0 rgb(10 31 68 / 10%), 0 0 1px 0 rgb(10 31 68 / 8%);
+            border-radius: 3px;
             height: 100%;
             width: 90%;
             margin-left: 5%;
-            background-color: blue;
             border-radius: 5px;
             text-align: center;
             color: white;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
+            padding: 11px 10px 10px;
         }
         #right>:nth-child(3){
             /* height: 100%;
@@ -83,10 +87,6 @@
             
             ;
         }
-        .quer>div{
-            
-            /* border: 1px solid red */
-        }
         #also_like{
             height: 300px;
             width: 100%;
@@ -97,7 +97,8 @@
             gap: 10px;
         }
         .ofer>:nth-child(1){
-            background-color: rgb(185, 71, 99);
+            background-color: #ee8787;
+            padding: 4px;
             color: white;
         }
         #use_promo:hover{
@@ -150,7 +151,7 @@
 </head>
 <body>
     <div style="width: 80%;  margin: auto;">
-        <p style="font-size: 20px;">Your Shopping Basket</p>
+        <p style="font-size: 26px;">Your Shopping Basket</p>
         
         <div class="ofer">
             <p>Get the offer </p>
@@ -178,7 +179,7 @@
                
             </div>
             <div id="right">
-                <div></div>
+                <div id="tp"></div>
                 <div> <button id="btn">Checkout Now</button> </div>     
                 <div>
                     <img src="https://www.paypalobjects.com/webstatic/mktg/logo-center/PP_Acceptance_Marks_for_LogoCenter_266x142.png" alt="">
@@ -267,6 +268,12 @@
     var left_div=document.getElementById("left")
     var l=5
     show_product(cart)
+    var stp = document.getElementsByClassName("stp")
+            var sum=0;
+            for(var i=0; i<stp.length; i++){
+                 sum+= parseInt(stp[i].textContent.match(/\d/g).join(''))
+            }
+            tp.textContent = `Total ${sum}`
     function show_product(cart){
         cart.map(function(element){
         var div=document.createElement("div")
@@ -302,32 +309,40 @@
             var qty=e.target.value
             //console.log(qty)
             total_price.innerHTML='&#x20b9 '+qty*element.price
-                   
+            var tp = document.getElementById("tp")
+            var stp = document.getElementsByClassName("stp")
+            var sum=0;
+            for(var i=0; i<stp.length; i++){
+                 sum+= parseInt(stp[i].textContent.match(/\d/g).join(''))
+            }
+            tp.textContent = `Total ${sum}`
         })
         
         var remove_btn=document.createElement("p")
         remove_btn.setAttribute("id",'remove')
-        remove_btn.textContent="remove"
+        remove_btn.textContent="Remove"
         remove_btn.addEventListener('click',function(){
-            var remove_item=element
-            cart_product=cart_product.filter(el=>{
-                if(el.name==remove_item.name&& el.price==remove_item.price){
-                }else{
-                    return el
-                }
-            })
+              div.remove()
+            // cart_product=cart_product.filter(el=>{
+            //     if(el.name == remove_item.name && el.price==remove_item.price){
+            //     }else{
+            //         return el
+            //     }
+            // })
             localStorage.setItem('cart',JSON.stringify(cart_product))
             console.log(cart_product)
             location.reload()
-            
         })
+
         div4.append(select,remove_btn)
         var div5=document.createElement('div')
         var total_price=document.createElement("p")
+        total_price.setAttribute("class","stp")
         total_price.innerHTML='&#x20b9 '+element.price
         div5.append(total_price)
         div.append(img,div2,div3,div4,div5)
         left_div.append(div)
+        
      });
     }
     show_product()
@@ -340,7 +355,7 @@
                     return el
                 }
             })
-            localStorage.setItem('cart',JSON.stringify(cart_product))
+            localStorage.setItem('cart',JSON.stringify(cart))
             console.log(cart_product)
             show_product()
         

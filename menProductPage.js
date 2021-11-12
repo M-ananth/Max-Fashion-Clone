@@ -604,13 +604,6 @@ mProducts.map(function(el){
     var div =document.createElement("div")
         div.setAttribute("class", `prodSubdiv`)
 
-        var productPreview =[]
-        div.addEventListener("click",function(){
-            productPreview.push(el)
-            localStorage.setItem("productPreview",JSON.stringify(el))
-            window.location.href="productpreviewpage.html"
-        })
-
         div.addEventListener("mouseover", function(){
                    a1.style.display = "block"
                    a2.style.display = "block"
@@ -622,6 +615,14 @@ mProducts.map(function(el){
                    div3.style.display = "none"
         })
         var div1 = document.createElement("div")
+        // <------------------Preview Page------------------>
+        var productPreview =[]
+        div1.addEventListener("click",function(){
+            productPreview.push(el)
+            localStorage.setItem("productPreview",JSON.stringify(el))
+            window.location.href="productpreviewpage.html"
+        })
+        // <------------------->
             div1.setAttribute("class", "imgbox")
             
             var img1 = document.createElement("img")
@@ -676,7 +677,7 @@ mProducts.map(function(el){
    
             var btn = document.createElement("button");
             btn.addEventListener("click",function(){
-                additem(item)
+                additem(el)
             });
             btn.setAttribute("class","div3b3")
             btn.textContent = "ADD TO BASKET";
@@ -686,4 +687,9 @@ mProducts.map(function(el){
         div.append(div1,div2,div3)
         menProducts.append(div)   
     })
+    var arr = []
+    function additem(item){
+        arr.push(item)
+        localStorage.setItem("cart" , JSON.stringify(arr))
+    }
 }

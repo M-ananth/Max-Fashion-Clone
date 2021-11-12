@@ -17,6 +17,7 @@
         #right{
             width: 25%;
             height: 200px;
+            padding-top: 14px;
         }
         #left>div{
             height: 200px;
@@ -287,14 +288,6 @@
         var prod_title=document.createElement('h5')
         prod_title.textContent= element.name
 
-        var btn = document.getElementById("btn")
-            btn.addEventListener("click",function(){
-                var rdiv = document.getElementsByClassName("rdiv")
-                for(var i=0; i<rdiv.length; i++){
-                    console.log(rdiv[i])
-                }
-                console.log("hi")
-        })
         
 
         var size=document.createElement('p')
@@ -377,7 +370,15 @@
         var promo_code=document.getElementById("inp_promo").value
         console.log(promo_code)
     })
-   
-    
+    // var btn = document.getElementById("btn")
+    // btn.addEventListener("click",function(){
+    //     console.log("hi")
+    // })
+    //     var sdiv = document.getElementsByClassName("sdiv")
+    //   for(var i=0; i<sdiv.length; i++){
+    //       console.log(sdiv[i].innerHTML)
+    //   }
+    //   console.log("hi",sdiv.length)
+    // })
 </script>
 </html>

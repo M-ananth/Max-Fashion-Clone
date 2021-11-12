@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lan3="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -26,13 +26,14 @@
         margin: auto;
         margin-left: 10%;
         margin-top: 60px;
+        
       }
       #box1 {
         display: grid;
         grid-template-columns: repeat(4, 25%);
         left:0; 
         height: 550px;
-        /* width: auto; */
+        width: auto;
         margin-top: 50px;
        
       }
@@ -55,13 +56,15 @@
         background-color: white;
         border: 1px solid white;
       }
-      .navbar ul{
+      .navbar>ul{
+          width: 100%;
             list-style: none;
             position: relative;
             margin: 0;
             padding: 0;
             float: left;
             background-color:white;
+
       }
       .navbar ul a{
             text-decoration: none;
@@ -69,15 +72,20 @@
             line-height:40px;
             display: block;
       }
-      .navbar ul li:nth-child(1){
-         margin-right: 0px !important;
-         width:100px;
-      }
       .navbar ul li{
             float: left;
             position: relative;
             margin: 0;
 
+       }
+       .navbar > ul> li:nth-child(6){
+           background-color: #EBEBEB;
+           /* margin-left: 15px; */
+           width: 30%;
+           /* margin-right: 2%; */
+       }
+       .navbar >ul>li:nth-child(7){
+            margin-left: 11%;
        }
       .navbar ul ul{
             position:fixed;
@@ -88,7 +96,7 @@
             display: flex;
             position: relative;
             float: left;
-            /* justify-content: space-evenly; */
+            justify-content: space-evenly;
    
        }
       .navbar ul li:hover ul{
@@ -104,16 +112,15 @@
       }
       #first {
         background-color: black;
-        margin-bottom: 20px;
-
-      
-        height: 55px;
-        padding-top: 5px;
+        /* margin-bottom: 20px;
+        padding-top: 2px;
+        padding-bottom: 1px; */
+         /* padding: 1px 0px; */
       }
       #whitelink{
         color: white;
         text-decoration: none;
-        font-size: 20px;
+        font-size: 12px;
         font-family: "Open Sans", sans-serif;
         margin-top: 1px;
       }
@@ -129,12 +136,13 @@
       }
       
       input[type*="c"] {
-        /* width: 450px; */
         height: 40px;
         background-color: rgb(235, 235, 235);
         margin-top: 1px;
         border: none;
-        font-size: 15px;
+        /* margin-right: 100px;
+        margin-left: 5px; */
+        font-size: 14px;
         font-family: "Open Sans", sans-serif;
       }
       #otherblacklink{
@@ -144,9 +152,6 @@
         font-weight: bolder;
         font-family: "Open Sans", sans-serif;
         padding-left: 10px;
-      }
-      #inpt{
-        background-color:rgb(235, 235, 235);
       }
       
       .blank {
@@ -164,26 +169,26 @@
       .shopmen {
         
         height: 550px;
-        /* width: 100%; */
+        width: 100%;
         background-image: url(https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/pre-landing-Men-19Feb2020.jpg);
         background-repeat: no-repeat;
-        /* background-size: 100% 550px; */
+        background-size: 100% 550px;
       }
       .shopgirls {
        
         height: 550px;
-        /* width: 100%; */
+        width: 100%;
         background-image: url(https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/pre-landing-Girls-19Feb2020.jpg);
         background-repeat: no-repeat;
-        /* background-size: 100% 550px; */
+        background-size: 100% 550px;
       }
       .shopboys {
         
         height: 550px;
-        /* width: 100%; */
+        width: 100%;
         background-image: url(https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/pre-landing-Boys-19Feb2020.jpg);
         background-repeat: no-repeat;
-        /* background-size: 100% 550px; */
+        background-size: 100% 550px;
       }
       button {
         background-color: aliceblue;
@@ -215,7 +220,7 @@
         color: rgb(160, 159, 159);
       }
       input[type="email"] {
-        width: 400px;
+        width: 430px;
         height: 55px;
         background-color: rgb(236, 232, 232);
         margin-top: 5px;
@@ -346,10 +351,11 @@
         .search{
           font-size:20px;
           color:black;
-          color:gray; 
-          background-color:rgb(235, 235, 235);
-          padding: 10px;
-          margin-left: 0px;
+         background-color: #EBEBEB;
+         padding: 11px;
+          /* margin-left: 50px; */
+          color:gray;
+          
         }
         .phone{
           font-size:35px;
@@ -359,7 +365,7 @@
         }
          img {
         display: flex;
-        width: 25%;
+        /* width: 25%; */
       }
     </style>
   </head>
@@ -391,9 +397,9 @@
   
       <div class="navbar">
         <ul>
-          <!-- <li><a href="homepage.html">
+          <li><a href="homepage.html">
             <img width="50px" height="40px" src="https://i1.lmsin.net/website_images/logos/max/ae/en/logo-max.svg">
-          </a></li> -->
+          </a></li>
           <li>
             <a id="blacklink" href="Women.html">Women </a>
             <ul>
@@ -452,11 +458,10 @@
               <li><a  id="blacklink" href="">More</a></li>
             </ul>
           </li>
-          <li id="inpt">
+          <li>
             <i class="fas fa-search search"></i>
             <input id="search" type="text c" placeholder="What are you looking for?" /></li>
-
-            <li><a id="blacklink" href="Signup.html"> Sign Up - Sign In</a></li>
+               <li><a id="blacklink" href="Signup.html"> Sign Up - Sign In</a></li>
             <li><a id="blacklink" href="basket.html">Basket</a></li>  
             <i class="fas fa-lock basket"></i>
         </ul>
@@ -517,7 +522,7 @@
         <div>
       
           <ul type="none">
-            <li><p class="lasthead">Women</p></li>
+            <li><p3class="lasthead">Women</p></li>
            <a id="greylink"href=" "><li>Tops</li></a>
            <a id="greylink" href=" "><li>Bottoms</li></a>
            <a id="greylink"href=" "><li>Dresses & Jumpsuits</li></a>
@@ -532,7 +537,7 @@
         </div>
         <div>
           <ul type="none">
-            <li><p class="lasthead">Men</p></li>
+            <li><p3class="lasthead">Men</p></li>
           <a id="greylink" href=""><li>Tops</li></a>
           <a id="greylink" href=" "><li>Bottoms</li></a>
           <a id="greylink" href=" "><li>Sportswear</li></a>
@@ -543,7 +548,7 @@
         </div>
         <div>
           <ul type="none">
-            <li><p class="lasthead">Boys</p></li>
+            <li><p3class="lasthead">Boys</p></li>
           <a id="greylink" href=" "><li>Tops</li></a>
           <a id="greylink" href=" "><li>Bottoms</li></a>
           <a id="greylink" href=" "><li>Indian Wear</li></a>
@@ -555,7 +560,7 @@
         </div>
         <div>
           <ul type="none">
-            <li><p class="lasthead">Girls</p></li>
+            <li><p3class="lasthead">Girls</p></li>
           <a id="greylink" href=" "><li>Tops</li></a>
           <a id="greylink" href=" "><li>Bottoms</li></a>
           <a id="greylink" href=" "><li>Indian Wear</li></a>
@@ -568,14 +573,14 @@
         </div>
         <div>
           <ul type="none">
-            <li><p class="lasthead">Explore</p></li>
+            <li><p3class="lasthead">Explore</p></li>
           <a id="greylink" href=" "><li>Offers</li></a>
           <a id="greylink" href=" "><li>Magazine</li></a>
           </ul>
         </div>
         <div>
           <ul type="none">
-            <li><p class="lasthead">About</p></li>
+            <li><p3class="lasthead">About</p></li>
           <a id="greylink" href=" "><li>About us</li></a>
           <a id="greylink" href=" "><li>Write to us</li></a>
           <a id="greylink" href=" "><li>Careers</li></a>
@@ -587,7 +592,7 @@
         </div>
         <div>
           <ul type="none">
-              <li><p class="lasthead">Help</p></li>
+              <li>3p class="lasthead">Help</p></li>
               <a id="greylink"href=""><li>Contact us</li></a>
               <a id="greylink" href=" "><li>Shipping</li></a>
               <a id="greylink" href=" "><li>Return Process</li></a>
@@ -642,4 +647,3 @@
    
   </body>
 </html>
-

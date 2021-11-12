@@ -277,6 +277,7 @@
     function show_product(cart){
         cart.map(function(element){
         var div=document.createElement("div")
+        div.setAttribute("class", "rdiv")
 
         var img=document.createElement("img")
         img.setAttribute("src",element.image1)
@@ -286,6 +287,14 @@
         var prod_title=document.createElement('h5')
         prod_title.textContent= element.name
 
+        var btn = document.getElementById("btn")
+            btn.addEventListener("click",function(){
+                var rdiv = document.getElementsByClassName("rdiv")
+                for(var i=0; i<rdiv.length; i++){
+                    console.log(rdiv[i])
+                }
+                console.log("hi")
+        })
         
 
         var size=document.createElement('p')
@@ -368,5 +377,7 @@
         var promo_code=document.getElementById("inp_promo").value
         console.log(promo_code)
     })
+   
+    
 </script>
 </html>

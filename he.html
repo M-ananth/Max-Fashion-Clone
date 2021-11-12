@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/36165df214.js" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+    <style>
+        .vehicle{
+          font-size:20px;
+          color:white;
+          margin-right: 10px;
+        }
+        .basket{
+          font-size:20px;
+          color:black;
+          margin-top: 10px;
+        }
+        .facebook{
+          font-size:35px;
+          color:black;
+          margin-top: 30px;
+          margin-right: 20px;
+        }
+        
+        .phone{
+          font-size:35px;
+          color:black;
+          margin-right: 10px;
+        
+        }
+#box {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    height: 250px;
+    width: 90%;
+    margin: auto;
+    margin-left: 10%;
+    margin-top: 60px;
+    
+  }
+ .navbar>ul{
+      width: 100%;
+        list-style: none;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        float: left;
+        background-color:white;
+
+  }
+  .navbar ul a{
+        text-decoration: none;
+        padding: 0 20px;
+        line-height:40px;
+        display: block;
+  }
+  .navbar ul li{
+        float: left;
+        position: relative;
+        margin: 0;
+
+   }
+   .navbar > ul> li:nth-child(6){
+       background-color: #EBEBEB;
+       /* margin-left: 15px; */
+       width: 30%;
+       /* margin-right: 2%; */
+   }
+   .navbar >ul>li:nth-child(7){
+        margin-left: 11%;
+   }
+  .navbar ul ul{
+        position:fixed;
+        background-color: white;
+        display:none;
+   }
+  .navbar ul ul li{
+        display: flex;
+        position: relative;
+        float: left;
+        justify-content: space-evenly;
+
+   }
+  .navbar ul li:hover ul{
+        display: flex;
+        display: block;
+        float: left;
+        left: 0;
+        
+  }
+  .search{
+          font-size:20px;
+          color:black;
+          color:gray; 
+          background-color:rgb(235, 235, 235);
+          padding: 10px;
+          margin-left: 0px;
+        }
+  #first ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 8px;
+  }
+  #first {
+    background-color: black;
+  }
+  #whitelink{
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: "Open Sans", sans-serif;
+    margin-top: 1px;
+  }
+  
+  #blacklink{
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight:bolder;
+    font-family: "Open Sans", sans-serif;
+    margin-left: 10px;
+    
+  }
+  
+  input[type*="c"] {
+    width: 86%;
+    height: 40px;
+    background-color: rgb(235, 235, 235);
+    margin-top: 1px;
+    border: none;
+    /* margin-right: 100px;
+    margin-left: 5px; */
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+  }
+  input[type*="c"]:focus {
+      outline: none;
+  }
+  #otherblacklink{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: "Open Sans", sans-serif;
+    padding-left: 10px;
+  }
+  
+  .blank {
+    color: white;
+  }
+    </style>
+</head>
+<body>
+  <body>
+  <div id="first">
+    <ul>
+      <li> 
+        <i class="fas fa-truck vehicle"></i>
+        <a id="whitelink" href="">Free Shipping</a>
+      </li>
+      <li>
+        <i class="fas fa-store-alt vehicle"></i>
+        <a id="whitelink"  href="">Return To Store</a></li>
+      <li>
+        <i class="fas fa-store-alt vehicle"></i>
+        <a id="whitelink"  href="">Click & collect</a></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li><a id="whitelink"  href="">Download Our Apps</a></li>
+      <li><a id="whitelink"  href="">Store Locator</a></li>
+      <li><a id="whitelink"  href="">Help</a></li>
+    </ul>
+  </div>
+
+  <div class="navbar">
+    <ul>
+      <li><a href="homepage.html">
+        <img width="101px" height="50px" src="https://i1.lmsin.net/website_images/logos/max/ae/en/logo-max.svg">
+      </a></li>
+      <li>
+        <a id="blacklink" href="Women.html">Women </a>
+        <ul>
+          <li><a  id="blacklink" href="">Tops</a></li>
+          <li><a  id="blacklink" href="">Bottoms</a></li>
+          <li><a  id="blacklink" href="">Dresses & Jumpsuits</a></li>
+          <li><a  id="blacklink" href="">Sportswear</a></li>
+          <li><a  id="blacklink" href="">Winterwear</a></li>
+          <li><a  id="blacklink" href="">Ethnic Wear</a></li>
+          <li><a  id="blacklink" href="">Lingerie</a></li>
+          <li><a  id="blacklink" href="">Sleepwear</a></li>
+          <li><a  id="blacklink" href="">Accessories</a></li>
+          <li><a  id="blacklink" href="">Shoes</a></li>
+        </ul>
+      </li>
+      <li>
+        <a id="blacklink"  href="mensfront.html">Men </a>
+        <ul>
+          <li><a  id="blacklink" href="">Bottoms</a></li>
+          <li><a  id="blacklink" href="">Sportswear</a></li>
+          <li><a  id="blacklink" href="">Tops</a></li>
+          <li><a  id="blacklink" href="">Loungewear</a></li>
+          <li><a  id="blacklink" href="">Innerwear</a></li>
+          <li><a  id="blacklink" href="men.html">Indian Wear</a></li>
+          <li><a  id="blacklink" href="">Accessories</a></li>
+          <li><a  id="blacklink" href="">Shoes</a></li>
+          <li><a  id="blacklink" href="">Winterwear</a></li>
+          <li><a  id="blacklink" href="">The Shirt Shop</a></li>
+          <li><a  id="blacklink" href="">More</a></li>
+        </ul>
+      </li>
+      <li>
+        <a id="blacklink"  href="girls.html"> Girls</a>
+
+        <ul>
+          <li><a id="blacklink" href="">Tops</a></li>
+          <li><a id="blacklink" href="">Bottoms</a></li>
+          <li><a id="blacklink" href="">Essentials</a></li>
+          <li><a id="blacklink" href="">Accessories</a></li>
+          <li><a id="blacklink" href="">Shoes</a></li>
+          <li><a id="blacklink" href="">Indian Wear</a></li>
+          <li><a id="blacklink" href="">Winterwear</a></li>
+          <li><a id="blacklink" href="">More</a></li>
+        </ul>
+      </li>
+      <li>
+        <a id="blacklink"  href="boys.html"> Boys</a>
+                  <ul>
+          <li><a  id="blacklink" href="">Tops</a></li>
+          <li><a  id="blacklink" href="">Bottoms</a></li>
+          <li><a  id="blacklink" href="">Essentials</a></li>
+          <li><a  id="blacklink" href="">Accessories</a></li>
+          <li><a  id="blacklink" href="">Shoes</a></li>
+          <li><a  id="blacklink" href="">Indian Wear</a></li>
+          <li><a  id="blacklink" href="">Winterwear</a></li>
+          <li><a  id="blacklink" href="">More</a></li>
+        </ul>
+      </li>
+      <li>
+        <i class="fas fa-search search"></i>
+        <input id="search" type="text c" placeholder="What are you looking for?" /></li>
+           <li><a id="blacklink" href="Signup.html"> Sign Up - Sign In</a></li>
+        <li><a id="blacklink" href="basket.html">Basket</a></li>  
+        <i class="fas fa-lock basket"></i>
+    </ul>
+  </div>
+</body>
+</html>

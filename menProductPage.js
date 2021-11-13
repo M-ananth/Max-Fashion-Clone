@@ -687,9 +687,10 @@ mProducts.map(function(el){
         div.append(div1,div2,div3)
         menProducts.append(div)   
     })
-    var arr = [];
+    var arr = JSON.parse(localStorage.getItem("cart")) || [];
     function additem(item){
-        arr.push(item)
-        localStorage.setItem("cart" , JSON.stringify(arr))
+        arr.push(item);
+        localStorage.setItem("cart" , JSON.stringify(arr));
+        alert("You've succesfully added 1 product in cart")
     }
 }

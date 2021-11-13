@@ -288,12 +288,12 @@
         var  promocode=document.getElementById("inp_promo").value
         if(promocode==="masai30" && counter ==1){
                     var tp = document.getElementById("tp")
-                   tp.textContent=(parseInt(tp.textContent.match(/\d/g).join("")*0.7));
+                   tp.textContent=`Total = ${(parseInt(tp.textContent.match(/\d/g).join("")*0.7))}`
                    console.log(tp.textContent)
                    }
-        else{
-            tp.textContent=(parseInt(tp.textContent.match(/\d/g).join("")));  
-        }           
+        // else{
+        //     tp.textContent=(parseInt(tp.textContent.match(/\d/g).join("")));  
+        // }           
                    
         totalPrice=tp.textContent
 

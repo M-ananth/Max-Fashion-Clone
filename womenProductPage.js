@@ -246,7 +246,7 @@ mProducts.map(function(el){
    
             var btn = document.createElement("button");
             btn.addEventListener("click",function(){
-                additem(el)
+                additem(item)
             });
             btn.setAttribute("class","div3b3")
             btn.textContent = "ADD TO BASKET";
@@ -256,10 +256,4 @@ mProducts.map(function(el){
         div.append(div1,div2,div3)
         menProducts.append(div)   
     })
-    var arr = JSON.parse(localStorage.getItem("cart")) || [];
-    function additem(item){
-        arr.push(item);
-        localStorage.setItem("cart" , JSON.stringify(arr));
-        alert("You've succesfully added 1 product in cart")
-    }
 }

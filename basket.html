@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Shopping at Max</title>
+    <title>Document</title>
     <style>
         body{
             font-family:"ProximaNova","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -40,6 +40,7 @@
             border-width: thin;
             margin: 15px 0px 15px 0px;
             display: flex;
+
         }
         #left>div>*{
             height: 80%;
@@ -106,6 +107,7 @@
         #also_like{
             height: 300px;
             width: 100%;
+
         }
         .ofer{
             display: flex;
@@ -134,7 +136,6 @@
         #promo>input{
             width: 70%;
             border-width: thin;
-            border:1px solid grey
         }
         .like_div{
             display: flex;
@@ -200,21 +201,17 @@
             </div>
             <div id="right">
                 <div id="tp"></div>
-                <div> <a href="checkout.html"><button id="btn">Checkout Now</button> </a></div>     
+                <div> <button id="btn">Checkout Now</button> </div>     
                 <div>
                     <img style="width: 100%; height:100px"  class="ig" src="z.png" alt="">
                 </div>
             </div>
         </div>
-        <!-- <div id="promo">
-            <input type="text" name="" id="inp_promo">
-            <button id="apply_promo">Apply</button>
-        </div> -->
-        <p > <img style="height: 15px; width: 20px;" src="https://i1.lmsin.net/website_images/common/images/basket/ico-gift.png" alt="">Got a Promo Code?  <span style="color: blue;" id="use_promo">Use it here</span></p>
         <div id="promo">
             <input type="text" name="" id="inp_promo">
-            <button id="apply_promo" onclick="applypromo()">Apply</button>
+            <button id="apply_promo">Apply</button>
         </div>
+        <p> <img style="height: 15px; width: 20px;" src="https://i1.lmsin.net/website_images/common/images/basket/ico-gift.png" alt="">Got a Promo Code? <span style="color: blue;" id="use_promo">Use it here</span></p>
         <img style="height: 15px; width: 20px;"  src="https://i1.lmsin.net/website_images/in/giftcards/gift-card-icon.svg" alt=""><span>Have a Gift Card? Redeem it at checkout.</span>
         <div class="quer">
             <div>
@@ -280,40 +277,6 @@
     </div>
 </body>
 <script>
-    var total_price_after_coupan=0
-    var totalPrice=0;
-    var counter =0
-    function applypromo(){
-        counter++
-        var  promocode=document.getElementById("inp_promo").value
-        if(promocode==="masai30" && counter ==1){
-                    var tp = document.getElementById("tp")
-                   tp.textContent=(parseInt(tp.textContent.match(/\d/g).join("")*0.7));
-                   console.log(tp.textContent)
-                   }
-        else{
-            tp.textContent=(parseInt(tp.textContent.match(/\d/g).join("")));  
-        }           
-                   
-        totalPrice=tp.textContent
-
-        console.log(totalPrice)
-        // total()
-                    // tp.textContent="Total "+total_price_after_coupan
-                    
-
-        
-    }
-    document.getElementById("use_promo").addEventListener("click",function(){
-        document.getElementById("promo").style.display='flex'
-        
-    })
-    // function total(){
-    //     cart.map(el=>{
-    //         total_price_after_coupan+=Number((el.price))
-    //     })
-    // }
-    
     var cart =JSON.parse(localStorage.getItem("cart")) || []
     var left_div=document.getElementById("left")
     var l=5
@@ -328,15 +291,22 @@
         cart.map(function(element){
         var div=document.createElement("div")
         div.setAttribute("class", "rdiv")
+
         var img=document.createElement("img")
         img.setAttribute("src",element.image1)
+
         var div2=document.createElement('div')
+
         var prod_title=document.createElement('h5')
         prod_title.textContent= element.name
+
         
+
         var size=document.createElement('p')
         size.textContent= `Size: XL`
+
         div2.append(prod_title,size)
+
         var div3=document.createElement('div')
         var price=document.createElement('p')
         price.innerHTML='&#x20b9 '+element.price
@@ -360,7 +330,6 @@
                  sum+= parseInt(stp[i].textContent.match(/\d/g).join(''))
             }
             tp.textContent = `Total ${sum}`
-           
         })
         
         var remove_btn=document.createElement("p")
@@ -374,18 +343,11 @@
             //         return el
             //     }
             // })
-            var tp = document.getElementById("tp")
-            var stp = document.getElementsByClassName("stp")
-            var sum=0;
-            for(var i=0; i<stp.length; i++){
-                 sum+= parseInt(stp[i].textContent.match(/\d/g).join(''))
-            }
-            tp.textContent = `Total ${sum}`
-            
             localStorage.setItem('cart',JSON.stringify(cart_product))
             console.log(cart_product)
             location.reload()
         })
+
         div4.append(select,remove_btn)
         var div5=document.createElement('div')
         var total_price=document.createElement("p")
@@ -398,30 +360,28 @@
      });
     }
     show_product()
-    // console.log(cart)
-    function remove(element,index){
+    console.log(cart_product)
+    function remove(element){
         var remove_item=element
-            cart=cart.filter(el=>{
+            cart_product=cart_product.filter(el=>{
                 if(el.name==remove_item.name&& el.price==remove_item.price){
                 }else{
                     return el
                 }
-                localStorage.removeItem("element.index")
             })
             localStorage.setItem('cart',JSON.stringify(cart))
-            // console.log(cart_product)
+            console.log(cart_product)
             show_product()
-    }
-    localStorage.setItem("price",JSON.stringify(totalPrice))
-    // document.getElementById("use_promo").addEventListener("click",function(){
-    //     document.getElementById("promo").style.display='flex'
         
-    // })
-    // var promo_arr=['MAX1K','MAX500','MAX250']
-    // document.getElementById("apply_promo").addEventListener('click',function(){
-    //     var promo_code=document.getElementById("inp_promo").value
-    //     console.log(promo_code)
-    // })
+    }
+    document.getElementById("use_promo").addEventListener("click",function(){
+        document.getElementById("promo").style.display='flex'
+    })
+    var promo_arr=['MAX1K','MAX500','MAX250']
+    document.getElementById("apply_promo").addEventListener('click',function(){
+        var promo_code=document.getElementById("inp_promo").value
+        console.log(promo_code)
+    })
     // var btn = document.getElementById("btn")
     // btn.addEventListener("click",function(){
     //     console.log("hi")

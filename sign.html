@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign in</title>
+    <title>Online Shopping at Max</title>
     <script src="https://kit.fontawesome.com/1e9a702aec.js" crossorigin="anonymous"></script>
     <style>
         #mainDiv{
@@ -85,6 +85,10 @@
             font-size: 26px;
             border-radius: 5px;
         }
+        .inputBox:focus{
+            outline: none;
+            border-color: #303ab2;
+        }
         #scndLast{
             height: 10%;
             width: 90%;
@@ -148,25 +152,30 @@
             </div>
 
             <div class="myBtnDiv">
-                <button class="myBtn">SIGN IN</button>
+                <button class="myBtn" id="logIn">Login</button>
             </div>    
         </div>
     </div>
 </body>
 </html>
 <script>
-    document.querySelector("button").addEventListener("click", signIn);
+    document.getElementById("logIn").addEventListener("click", signIn);
     var regdUser = JSON.parse(localStorage.getItem("userData"));
     function signIn(){
-        var email = document.querySelector("#email").value;
-        var pass = document.querySelector("#pass").value;
+        var email = document.querySelector("#emailAddr").value;
+        var pass = document.querySelector("#passWord").value;
 
         if(email == 'admin' && pass == 'admin'){
             window.location.href = "admin.html";
-        } else{
+            alert('Welcome admin!');
+        }else if(email == 'user1@mail.com' && pass == '1234') {
+            window.location.href = "homepage.html";
+                    alert('login succesful');
+        }
+        else{
             for (var i = 0; i < regdUser.length; i++){
                 if (regdUser[i].emailAddress == email && regdUser[i].passWord == pass){
-                    window.location.href = "products.html";
+                    window.location.href = "homepage.html";
                     alert('login succesful');
                 } else{
                     alert("Check you email & password");

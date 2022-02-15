@@ -9,4 +9,4 @@ Team members:
 5. fw13_168 Hemant Ahire
 6. fw13_169 Suraj Kisanrao Ughade
 
-Team lead: fw13_042 Sangram Mukherjee
+Tried to clone the maxFashion website and it's functionalities.
